@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import Board from './components/Board';
 import './App.css';
+import CardList from './components/CardList';
+
+const CARDS = [
+  {
+    card_id: 1,
+    message: 'is this working?????',
+    likes_count: 3,
+    board_id: 1,
+  },
+  {
+    card_id: 2,
+    message: 'i like everyone',
+    likes_count: -1,
+    board_id: 1,
+  },
+];
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <main>
+        <CardList cards={CARDS} />
+      </main>
     </div>
   );
 }
