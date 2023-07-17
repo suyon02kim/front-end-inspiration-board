@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from 'prop-types';
-// import './Card.css';
+import './Card.css';
 
 
 const Card = ({card_id, message, likes_count, board_id}) => {
     // delete function, add_likes function
     return (
-        <div>
+        <div class="card">
             <div>{message}</div>
-            <div>{likes_count}</div>
+            <div>{likes_count} 🥩</div>
         </div>
     );
 };
