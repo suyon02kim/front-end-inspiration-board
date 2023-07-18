@@ -1,6 +1,7 @@
 import Board from './components/Board';
 import './App.css';
 import CardList from './components/CardList';
+import BoardList from './components/BoardList';
 
 const CARDS = [
   {
@@ -23,7 +24,10 @@ function App() {
       <header className="App-header">
       </header>
       <main>
-        <CardList cards={CARDS} />
+        <div class="flex-container">
+          <BoardList />
+          <CardList cards={CARDS} />
+        </div>
       </main>
     </div>
   );
