@@ -8,9 +8,9 @@ const Card = ({card_id, message, likes_count, board_id}) => {
     // delete function, add_likes function
     return (
         <div class="card">
-            <div class="message">is this working??</div>
+            <div class="message">{message}</div>
             <div class="controls">
-                <div class="likes">3 🥩</div>
+                <div class="likes">{likes_count} 🥩</div>
                 <button class="delete-btn">delete</button>
             </div>
         </div>
