@@ -1,6 +1,10 @@
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import CardList from './components/CardList';
 import BoardList from './components/BoardList';
+import NewBoardForm from './components/NewBoardForm';
+import NewCardForm from './components/NewCardForm';
+import './App.css';
 
 const CARDS = [
   {
@@ -46,13 +50,26 @@ const BOARDS = [
 ];
 
 function App() {
+  const [boardData, setBoardData] = useState(BOARDS);
+  const [cardData, setCardData] = useState(CARDS);
+
   return (
     <div className="App">
       <header className="App-header">
       </header>
       <main>
-        <BoardList boards={BOARDS}/>
-        <CardList cards={CARDS} />
+        <section>
+          <BoardList boards={boardData}/>
+        </section>
+        <section>
+          <CardList cards={CARDS} />
+        </section>
+        <section>
+          <NewBoardForm addBoardCallback={setBoardData} />
+        </section>
+        <section>
+          <NewCardForm addCardCallback={setCardData} />
+        </section>
       </main>
     </div>
   );
