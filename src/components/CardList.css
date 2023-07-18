@@ -1,6 +1,15 @@
+/* VERSION A (horizontal scroll) */
+.cardlist {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+/* VERSION B (wrap)
 .cardlist {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    height: 300px;
-  }
+  } */

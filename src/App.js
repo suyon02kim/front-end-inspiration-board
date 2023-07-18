@@ -6,49 +6,6 @@ import NewBoardForm from './components/NewBoardForm';
 // import NewCardForm from './components/NewCardForm';
 import './App.css';
 
-const CARDS = [
-  {
-    card_id: 1,
-    message: 'is this working?????',
-    likes_count: 3,
-    board_id: 1,
-  },
-  {
-    card_id: 2,
-    message: 'i like everyone',
-    likes_count: -1,
-    board_id: 1,
-  },
-];
-
-const BOARDS = [
-  {
-    board_id: 1,
-    owner: "jsmr",
-    title: "jsmr",
-  },
-  {
-    board_id: 2,
-    owner: "jasmine",
-    title: "jasmine",
-  },
-  {
-    board_id: 3,
-    owner: "sarah",
-    title: "sarah",
-  },
-  {
-    board_id: 4,
-    owner: "mikalya",
-    title: "mikayla",
-  },
-  {
-    board_id: 5,
-    owner: "ruth",
-    title: "ruth",
-  },
-];
-
 const URL = 'https://beef-board.onrender.com/boards';
 
 function App() {
@@ -112,6 +69,7 @@ function App() {
           <CardList cards={cardData} />
         </section>
         <section>
+          <span>CREATE YOUR OWN BOARD:</span>
           <NewBoardForm addBoardCallback={addBoardData} />
         </section>
         <section>
