@@ -3,7 +3,7 @@ import axios from 'axios';
 import CardList from './components/CardList';
 import BoardList from './components/BoardList';
 import NewBoardForm from './components/NewBoardForm';
-import NewCardForm from './components/NewCardForm';
+// import NewCardForm from './components/NewCardForm';
 import './App.css';
 
 const CARDS = [
@@ -62,13 +62,13 @@ function App() {
           <BoardList boards={boardData}/>
         </section>
         <section>
-          <CardList cards={CARDS} />
+          <CardList cards={cardData} />
         </section>
         <section>
           <NewBoardForm addBoardCallback={setBoardData} />
         </section>
         <section>
-          <NewCardForm addCardCallback={setCardData} />
+          {/* <NewCardForm addCardCallback={setCardData} /> */}
         </section>
       </main>
     </div>
