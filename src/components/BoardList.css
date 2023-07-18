@@ -1,0 +1,14 @@
+.boardlist {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto;
+  }
+
+.boardlist-label {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 40px;
+    text-decoration: underline;
+}

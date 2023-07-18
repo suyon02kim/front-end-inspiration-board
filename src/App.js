@@ -1,4 +1,3 @@
-import Board from './components/Board';
 import './App.css';
 import CardList from './components/CardList';
 import BoardList from './components/BoardList';
@@ -18,16 +17,42 @@ const CARDS = [
   },
 ];
 
+const BOARDS = [
+  {
+    board_id: 1,
+    owner: "jsmr",
+    title: "jsmr",
+  },
+  {
+    board_id: 2,
+    owner: "jasmine",
+    title: "jasmine",
+  },
+  {
+    board_id: 3,
+    owner: "sarah",
+    title: "sarah",
+  },
+  {
+    board_id: 4,
+    owner: "mikalya",
+    title: "mikayla",
+  },
+  {
+    board_id: 5,
+    owner: "ruth",
+    title: "ruth",
+  },
+];
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
       </header>
       <main>
-        <div class="flex-container">
-          <BoardList />
-          <CardList cards={CARDS} />
-        </div>
+        <BoardList boards={BOARDS}/>
+        <CardList cards={CARDS} />
       </main>
     </div>
   );
