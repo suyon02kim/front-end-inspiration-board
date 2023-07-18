@@ -57,6 +57,10 @@ function App() {
     getCards();
   }, []);
 
+  // const toggleForm = () => {
+
+  // };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -69,7 +73,7 @@ function App() {
           <CardList cards={cardData} />
         </section>
         <section>
-          <span>CREATE YOUR OWN BOARD:</span>
+          {/* <button onclick="toggleForm()">Hide Form</button> */}
           <NewBoardForm addBoardCallback={addBoardData} />
         </section>
         <section>

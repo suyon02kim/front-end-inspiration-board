@@ -1,3 +1,53 @@
 .new-board-form {
-    border: 1px solid #000;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 4px #ccc;
+    background-color: #fff;
+    color: #000;
+    height: 200px;
+    width: 400px;
+    margin: 20px;
+    padding: 25px;
 }
+
+label {
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+input {
+    width: 100%;
+}
+
+.input-fields {
+    text-align: left;
+    margin: 10px;
+}
+
+.submit-btn {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #28c628;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 8px;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #ccc;
+  }
+  
+.submit-btn:hover {
+    background-color: #C67728;
+  }
+  
+.submit-btn:active {
+    background-color: #C67728;
+    box-shadow: 0 0px #ccc;
+    transform: translate(2px, 2px);
+  }

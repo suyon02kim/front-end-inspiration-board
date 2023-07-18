@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import './NewBoardForm.css';
 
 
 const NewBoardForm = ({ addBoardCallback }) => {
@@ -38,8 +39,9 @@ const NewBoardForm = ({ addBoardCallback }) => {
 
   return(
     <div class="new-board-form">
-      <form onSubmit={onFormSubmit}>
-        <div>
+      <h3>CREATE YOUR OWN BOARD</h3>
+      <form id="board-form" onSubmit={onFormSubmit}>
+        <div class="input-fields">
           <label htmlFor='title'>Title:</label>
           <input
             id='title'
@@ -48,7 +50,7 @@ const NewBoardForm = ({ addBoardCallback }) => {
             onChange={onTitleChange}
           />
         </div>
-        <div>
+        <div class="input-fields">
           <label htmlFor='owner'>Owner:</label>
           <input
             id='owner'
@@ -57,11 +59,13 @@ const NewBoardForm = ({ addBoardCallback }) => {
             onChange={onOwnerChange}
           />
         </div>
-        <input
-          type='submit'
-          value='Add Board'
-        />
       </form>
+      <button class="submit-btn"
+      type="submit" 
+      form="board-form" 
+      value="Add Board">
+        Add Board
+      </button>
     </div>
   );
 };
