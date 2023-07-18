@@ -11,6 +11,7 @@ const Card = ({card_id, message, likes_count, board_id}) => {
             <div className="message">{message}</div>
             <div className="controls">
                 <div className="likes">{likes_count} 🥩</div>
+                <button className="upvote-btn">upvote</button>
                 <button className="delete-btn">delete</button>
             </div>
         </div>
