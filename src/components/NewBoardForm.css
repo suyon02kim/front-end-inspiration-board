@@ -1,13 +1,28 @@
 .new-board-form {
+    width: 490px;
+    margin-top: 40px;
+}
+
+.form-content {
     border-radius: 10px;
     border: 1px solid #ddd;
     box-shadow: 2px 2px 4px #ccc;
     background-color: #fff;
     color: #000;
-    height: 200px;
+    height: auto;
     width: 400px;
     margin: 20px;
     padding: 25px;
+}
+
+.form-content--hidden {
+    display: none;
+}
+
+/* FORM INPUT AND LABEL STYLING */
+.input-fields {
+    text-align: left;
+    margin: 10px;
 }
 
 label {
@@ -22,16 +37,11 @@ input {
     width: 100%;
 }
 
-.input-fields {
-    text-align: left;
-    margin: 10px;
-}
-
-.submit-btn {
+/* DEFAULT BUTTON STYLING */
+button {
     outline: none;
     border: none;
     border-radius: 5px;
-    background-color: #28c628;
     color: #fff;
     text-transform: uppercase;
     padding: 8px;
@@ -40,14 +50,36 @@ input {
     margin: 10px;
     cursor: pointer;
     box-shadow: 2px 2px #ccc;
-  }
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: #555;
+}
   
-.submit-btn:hover {
-    background-color: #C67728;
-  }
-  
-.submit-btn:active {
-    background-color: #C67728;
+button:active {
+    background-color: #555;
     box-shadow: 0 0px #ccc;
     transform: translate(2px, 2px);
-  }
+}
+
+/* TOGGLE BUTTON STYLING */
+.toggle-btn {
+    background-color: #c67728;
+    font-size: 16px;
+    width: 300px;
+    box-shadow: 4px 4px #ccc;
+}
+
+toggle-btn:active {
+    transform: translate(4px, 4px);
+}
+
+/* SUBMIT BUTTON STYLING */
+.submit-btn {
+    background-color: #28c628;
+}
+  
+.submit-btn:active {
+    transform: translate(2px, 2px);
+}
