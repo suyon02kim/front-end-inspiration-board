@@ -1,6 +1,52 @@
 .card {
-    border: 1px solid #000;
-    padding: 20px;
-    width: 300px;
-    margin: 10px;
-}
+    border-radius: 5%;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 4px #ccc;
+    background-color: #fff;
+    color: #000;
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    padding: 25px;
+  }
+  
+.message {
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 21px;
+    height: 75%;
+    overflow: auto;
+  }
+  
+.controls {
+    height: 25%;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.delete-btn {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #C62828;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 8px;
+    font-size: 11px;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px #ccc;
+  }
+  
+.delete-btn:hover {
+    background-color: #C67728;
+  }
+  
+.delete-btn:active {
+    background-color: #C67728;
+    box-shadow: 0 0px #ccc;
+    transform: translate(2px, 2px);
+  }

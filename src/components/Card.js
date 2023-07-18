@@ -7,8 +7,11 @@ const Card = ({card_id, message, likes_count, board_id}) => {
     // delete function, add_likes function
     return (
         <div class="card">
-            <div>{message}</div>
-            <div>{likes_count} 🥩</div>
+            <div class="message">is this working??</div>
+            <div class="controls">
+                <div class="likes">3 🥩</div>
+                <button class="delete-btn">delete</button>
+            </div>
         </div>
     );
 };

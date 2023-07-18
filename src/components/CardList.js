@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import PropTypes from 'prop-types';
+import "./CardList.css";
 
 
 const CardList = ({cards}) => {
@@ -18,7 +19,7 @@ const CardList = ({cards}) => {
         });
     };
     return (
-        <div>
+        <div class="cardlist">
             {getCardList(cards)}
         </div>
     );
