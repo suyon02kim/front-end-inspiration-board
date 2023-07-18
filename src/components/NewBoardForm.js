@@ -48,6 +48,7 @@ const NewBoardForm = ({ addBoardCallback }) => {
             name='title'
             value={formFields.title}
             onChange={onTitleChange}
+            required
           />
         </div>
         <div class="input-fields">
@@ -57,6 +58,7 @@ const NewBoardForm = ({ addBoardCallback }) => {
             name='owner'
             value={formFields.owner}
             onChange={onOwnerChange}
+            required
           />
         </div>
       </form>

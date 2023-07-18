@@ -6,7 +6,7 @@ import NewBoardForm from './components/NewBoardForm';
 // import NewCardForm from './components/NewCardForm';
 import './App.css';
 
-const URL = 'https://beef-board.onrender.com/boards';
+const URL = 'https://beef-board.onrender.com/';
 
 function App() {
   const [boardData, setBoardData] = useState([]);
@@ -14,7 +14,7 @@ function App() {
 
   const getBoards = () => {
     axios
-      .get(`${URL}`)
+      .get(`${URL}/boards`)
       .then((response) => {
         const newBoards = response.data.map((board) => {
           return {
@@ -31,15 +31,15 @@ function App() {
   const addBoardData = (newBoardData) => { 
     const params = {title:newBoardData.title, owner:newBoardData.owner}
     axios 
-    .post(`${URL}`,params)
-    .then((response) => { 
+    .post(`${URL}/boards`,params)
+    .then(() => { 
       getBoards();
     });
   };
 
   const getCards = () => {
     axios
-      .get('https://beef-board.onrender.com/cards')
+      .get(`${URL}/cards`)
       .then((response) => {
         const newCards = response.data.map((card) => {
           return {
