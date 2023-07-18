@@ -70,7 +70,15 @@ function App() {
         setBoardData(newBoards);
       });
   };
-
+  
+  const addBoardData = (newBoardData) => { 
+    const params = {title:newBoardData.title, owner:newBoardData.owner}
+    axios 
+    .post(`${URL}`,params)
+    .then((response) => { 
+      getBoards();
+    });
+  };
 
   const getCards = () => {
     axios
@@ -104,7 +112,7 @@ function App() {
           <CardList cards={cardData} />
         </section>
         <section>
-          <NewBoardForm addBoardCallback={setBoardData} />
+          <NewBoardForm addBoardCallback={addBoardData} />
         </section>
         <section>
           {/* <NewCardForm addCardCallback={setCardData} /> */}
