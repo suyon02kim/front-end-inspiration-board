@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './Card.css';
 
 
+
 const Card = ({card_id, message, likes_count, board_id}) => {
     // delete function, add_likes function
     return (
