@@ -49,9 +49,31 @@ const BOARDS = [
   },
 ];
 
+const URL = 'https://beef-board.onrender.com/boards';
+
 function App() {
-  const [boardData, setBoardData] = useState(BOARDS);
+  const [boardData, setBoardData] = useState([]);
   const [cardData, setCardData] = useState(CARDS);
+
+  const getBoards = () => {
+    axios
+      .get(`${URL}`)
+      .then((response) => {
+        const newBoards = response.data.map((board) => {
+          return {
+            board_id: board.board_id,
+            title: board.title,
+            owner: board.owner,
+            cards: board.cards,
+          };
+        });
+        setBoardData(newBoards);
+      });
+  };
+
+  useEffect(() => {
+    getBoards();
+  }, []);
 
   return (
     <div className="App">
