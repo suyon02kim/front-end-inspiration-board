@@ -7,11 +7,11 @@ import './Card.css';
 const Card = ({card_id, message, likes_count, board_id}) => {
     // delete function, add_likes function
     return (
-        <div class="card">
-            <div class="message">{message}</div>
-            <div class="controls">
-                <div class="likes">{likes_count} 🥩</div>
-                <button class="delete-btn">delete</button>
+        <div className="card">
+            <div className="message">{message}</div>
+            <div className="controls">
+                <div className="likes">{likes_count} 🥩</div>
+                <button className="delete-btn">delete</button>
             </div>
         </div>
     );

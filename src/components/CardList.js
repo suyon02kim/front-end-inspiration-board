@@ -19,7 +19,7 @@ const CardList = ({cards}) => {
         });
     };
     return (
-        <div class="cardlist">
+        <div className="cardlist">
             {getCardList(cards)}
         </div>
     );

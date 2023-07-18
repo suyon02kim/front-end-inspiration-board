@@ -5,7 +5,7 @@ import './Board.css';
 
 const Board = ({board_id, title, owner}) => {
     return (
-        <div class="board">
+        <div className="board">
             {title}
         </div>
     );

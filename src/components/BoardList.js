@@ -17,8 +17,8 @@ const BoardList = ({boards}) => {
         });
     };
     return (
-        <div class="boardlist">
-            <div class="boardlist-label">PICK A BOARD:</div>
+        <div className="boardlist">
+            <div className="boardlist-label">PICK A BOARD:</div>
             {getBoardList(boards)}
         </div>
     );
