@@ -8,6 +8,7 @@ const Card = ({card_id, message, likes_count, board_id, deleteCard, updateBeefCo
     // delete function, add_likes function
     return (
         <div className="card">
+            <div className="id">#{card_id}</div>
             <div className="message">{message}</div>
             <div className="controls">
                 <div className="likes">{likes_count} 🥩</div>

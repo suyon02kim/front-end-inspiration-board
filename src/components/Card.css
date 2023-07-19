@@ -7,20 +7,30 @@
     color: #000;
     height: 200px;
     width: 200px;
+    min-width: 200px;
     margin: 20px;
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.id {
+  font-size: 28px;
+  font-style: italic;
+  text-align: left;
+  color: #ccc;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
 }
   
 .message {
     font-family: Arial;
     font-size: 14px;
     line-height: 21px;
-    height: 75%;
-    overflow: auto;
 }
   
 .controls {
-    height: 25%;
     margin-top: 10px;
     text-align: center;
     display: flex;
@@ -31,12 +41,14 @@
 /* DELETE BUTTON STYLING */
 .delete-btn {
     background-color: #C62828;
+    margin: 0px;
 }
 
 /* UPVOTE BUTTON STYLING */
 .upvote-btn {
   background-color: #eee;
   color: #C62828;
+  margin: 0px;
 }
 
 .upvote-btn:hover, .upvote-btn:active {
