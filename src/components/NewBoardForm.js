@@ -9,12 +9,33 @@ const NewBoardForm = ({ addBoardCallback }) => {
     owner: '',
   });
   const [isHidden, setHidden] = useState(true);
+  const [titleErrorMessage, setTitleErrorMessage] = useState('');
+  const [ownerErrorMessage, setOwnerErrorMessage] = useState('');
+
+  const validateTitle = (title) => {
+    if (title.length === 0) {
+      setTitleErrorMessage('Please title your BEEF');
+      return false;
+    } else {
+      return true;
+    }
+  };
+  
+  const validateOwner = (owner) => {
+    if (owner.length === 0) {
+      setOwnerErrorMessage('Whose BEEF is this?');
+      return false;
+    } else {
+      return true;
+    }
+  };
 
   const onTitleChange = (event) => {
     setFormFields({
       ...formFields,
       title: event.target.value
     });
+    validateTitle(event.target.value);
   };
 
   const onOwnerChange = (event) => {
@@ -22,11 +43,16 @@ const NewBoardForm = ({ addBoardCallback }) => {
       ...formFields,
       owner: event.target.value
     });
+    validateOwner(event.target.value);
   };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
 
+  const isTitleValid = validateTitle();
+  const isOwnerValid = validateOwner();
+
+  if (isTitleValid && isOwnerValid) {
     addBoardCallback({
       title: formFields.title,
       owner: formFields.owner,
@@ -36,7 +62,8 @@ const NewBoardForm = ({ addBoardCallback }) => {
       title: '',
       owner: '',
     });
-  };
+  }
+};
 
   const toggleForm = () => {
     if (isHidden) {
@@ -64,7 +91,9 @@ const NewBoardForm = ({ addBoardCallback }) => {
               onChange={onTitleChange}
               placeholder='Quarter Pounder Beef'
               required
+              className={titleErrorMessage ? 'error' : ''}
             />
+            {titleErrorMessage && <div className="error-message">{titleErrorMessage}</div>}
           </div>
           <div className="input-fields">
             <label htmlFor='owner'>Owner:</label>
@@ -75,7 +104,9 @@ const NewBoardForm = ({ addBoardCallback }) => {
               onChange={onOwnerChange}
               placeholder='Ronald M.'
               required
+              className={ownerErrorMessage ? 'error' : ''}
             />
+            {ownerErrorMessage && <div className="error-message">{ownerErrorMessage}</div>}
           </div>
         </form>
         <button 
