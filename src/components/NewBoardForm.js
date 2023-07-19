@@ -12,8 +12,8 @@ const NewBoardForm = ({ addBoardCallback }) => {
   const [titleErrorMessage, setTitleErrorMessage] = useState('');
   const [ownerErrorMessage, setOwnerErrorMessage] = useState('');
 
-  const validateTitle = (title) => {
-    if (title.length === 0) {
+  const validateTitle = () => {
+    if (formFields.title.length === 0) {
       setTitleErrorMessage('Please title your BEEF');
       return false;
     } else {
@@ -21,8 +21,8 @@ const NewBoardForm = ({ addBoardCallback }) => {
     }
   };
   
-  const validateOwner = (owner) => {
-    if (owner.length === 0) {
+  const validateOwner = () => {
+    if (formFields.owner.length === 0) {
       setOwnerErrorMessage('Whose BEEF is this?');
       return false;
     } else {
