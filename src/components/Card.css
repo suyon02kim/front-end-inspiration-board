@@ -1,4 +1,5 @@
 .card {
+    white-space: normal;
     border-radius: 5%;
     border: 1px solid #ddd;
     box-shadow: 2px 2px 4px #ccc;
