@@ -7,6 +7,8 @@ const NewCardForm = ({ addCardCallback }) => {
   const [formFields, setFormFields] = useState({
     message: ''
   });
+  const [errorMessage, setErrorMessage] = useState('');
+
 
   const onMessageChange = (event) => {
     setFormFields({
@@ -19,6 +21,11 @@ const NewCardForm = ({ addCardCallback }) => {
   const onFormSubmit = (event) => {
     event.preventDefault();
 
+    if (formFields.message.length > 40) {
+      setErrorMessage('You need less BEEF');
+    } else if (formFields.message.length < 2) {
+      setErrorMessage('You need More BEEF');
+    } else {
     addCardCallback({
       message: formFields.message
     });
@@ -26,7 +33,8 @@ const NewCardForm = ({ addCardCallback }) => {
     setFormFields({
       message:''
     });
-  };
+  }
+};
 
   return(
     <form onSubmit={onFormSubmit}>
@@ -40,10 +48,11 @@ const NewCardForm = ({ addCardCallback }) => {
           onChange={onMessageChange}
           placeholder='Who Got Beef?'
               required
+          className={errorMessage ? 'error' : ''}
         />
       </div>
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
       <button
-
         type='submit'
         value='Add Card'>
         Add Card
