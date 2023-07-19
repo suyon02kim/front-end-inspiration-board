@@ -37,28 +37,30 @@ const NewCardForm = ({ addCardCallback }) => {
 };
 
   return(
-    <form onSubmit={onFormSubmit}>
-      <div className="input-fields">
-        
-        <label htmlFor='message'>Message</label>
-        <input
-          id='message'
-          name='message'
-          value={formFields.message}
-          onChange={onMessageChange}
-          placeholder='Who Got Beef?'
-              required
-          className={errorMessage ? 'error' : ''}
-        />
-      </div>
-      {errorMessage && <div className="error-message">{errorMessage}</div>}
-      <button
-        type='submit'
-        value='Add Card'>
-        Add Card
+    <div className="new-card-form">
+    <h3>ADD BEEF</h3>
+    <form id="card-form" onSubmit={onFormSubmit}>
+        <div className="input-fields">
+          <label htmlFor='message'>Message</label>
+          <input
+            id='message'
+            name='message'
+            value={formFields.message}
+            onChange={onMessageChange}
+            placeholder='Who Got Beef?'
+                required
+            className={errorMessage ? 'error' : ''}
+          />
+        </div>
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
+        <button
+          className="submit-btn"
+          type='submit'
+          value='Add Card'>
+          Add Card
         </button>
-      
-    </form>
+      </form>
+  </div>
   );
 };
 
