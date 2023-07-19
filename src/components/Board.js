@@ -3,11 +3,18 @@ import PropTypes from 'prop-types';
 import './Board.css';
 
 
-const Board = ({board_id, title, owner}) => {
+const Board = ({board_id, title, owner, setSelectedBoard, getCards}) => {
+    // const getBoardCards = () => {
+    //     setSelectedBoard(board_id);
+    //     getCards();
+
+    // }
     return (
-        <div className="board">
+        <button className="board" 
+        onClick={() => getCards(board_id)}>
             {title}
-        </div>
+        </button>
+    
     );
 };
 
@@ -15,6 +22,8 @@ Board.propTypes = {
     board_id: PropTypes.number.isRequired,
     owner: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    setSelectedBoard: PropTypes.func.isRequired,
+    getCards: PropTypes.func.isRequired
 };
 
 export default Board;

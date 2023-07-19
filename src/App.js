@@ -11,6 +11,7 @@ const URL = 'https://beef-board.onrender.com/';
 function App() {
   const [boardData, setBoardData] = useState([]);
   const [cardData, setCardData] = useState([]);
+  const [selectedBoard, setSelectedBoard] = useState();
 
   const getBoards = () => {
     axios
@@ -37,9 +38,9 @@ function App() {
     });
   };
 
-  const getCards = () => {
+  const getCards = (board_id) => {
     axios
-      .get(`${URL}/cards`)
+      .get(`${URL}/boards/${board_id}/cards`)
       .then((response) => {
         const newCards = response.data.map((card) => {
           return {
@@ -54,7 +55,6 @@ function App() {
 
   useEffect(() => {
     getBoards();
-    getCards();
   }, []);
 
   // const toggleForm = () => {
@@ -67,7 +67,7 @@ function App() {
       </header>
       <main>
         <section>
-          <BoardList boards={boardData}/>
+          <BoardList boards={boardData} setSelectedBoard={setSelectedBoard} getCards={getCards}/>
         </section>
         <section>
           <CardList cards={cardData} />
