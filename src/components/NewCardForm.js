@@ -38,6 +38,7 @@ const NewCardForm = ({ addCardCallback }) => {
 
   return(
     <div className="new-card-form">
+    <div className="form-content" >
     <h3>ADD BEEF</h3>
     <form id="card-form" onSubmit={onFormSubmit}>
         <div className="input-fields">
@@ -60,6 +61,7 @@ const NewCardForm = ({ addCardCallback }) => {
           Add Card
         </button>
       </form>
+      </div>
   </div>
   );
 };
