@@ -4,14 +4,14 @@ import './Card.css';
 
 
 
-const Card = ({card_id, message, likes_count, board_id, deleteCard}) => {
+const Card = ({card_id, message, likes_count, board_id, deleteCard, updateBeefCount}) => {
     // delete function, add_likes function
     return (
         <div className="card">
             <div className="message">{message}</div>
             <div className="controls">
                 <div className="likes">{likes_count} 🥩</div>
-                <button className="upvote-btn">upvote</button>
+                <button className="upvote-btn" onClick={() => updateBeefCount(likes_count,card_id)}>upvote</button>
                 <button className="delete-btn" onClick={() => deleteCard(card_id)}>delete</button>
             </div>
         </div>
@@ -24,6 +24,7 @@ Card.propTypes = {
     likes_count: PropTypes.number.isRequired,
     board_id: PropTypes.number.isRequired,
     deleteCard: PropTypes.func.isRequired,
+    updateBeefCount: PropTypes.func.isRequired,
 };
 
 export default Card;

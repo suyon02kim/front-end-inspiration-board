@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import "./CardList.css";
 
 
-const CardList = ({cards, deleteCard}) => {
+const CardList = ({cards, deleteCard, updateBeefCount}) => {
     const getCardList = (cards) => {
         return cards.map((card) => {
             return (
@@ -15,6 +15,7 @@ const CardList = ({cards, deleteCard}) => {
                 likes_count={card.likes_count}
                 board_id={card.board_id}
                 deleteCard={deleteCard}
+                updateBeefCount={updateBeefCount}
                 />
             );
         });
@@ -36,6 +37,7 @@ CardList.propTypes = {
         })
     ).isRequired,
     deleteCard:PropTypes.func.isRequired,
+    updateBeefCount:PropTypes.func.isRequired,
 };
 
 export default CardList;

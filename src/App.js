@@ -56,6 +56,16 @@ function App() {
       });
   };
 
+  const updateBeefCount = (likes_count, card_id) =>{
+    likes_count++; 
+    const params={likes_count: likes_count,} 
+    axios 
+    .patch(`${URL}/cards/${card_id}`,params)
+    .then(() => {
+      getCards(selectedBoard);
+    });
+  };
+
   const deleteCard = (card_id) => {
     axios
     .delete(`${URL}/cards/${card_id}`)
@@ -81,7 +91,7 @@ function App() {
           <BoardList boards={boardData} setSelectedBoard={setSelectedBoard} getCards={getCards}/>
         </section>
         <section>
-          <CardList cards={cardData} deleteCard={deleteCard} />
+          <CardList cards={cardData} deleteCard={deleteCard} updateBeefCount={updateBeefCount}/>
         </section>
         <section>
           {/* <button onclick="toggleForm()">Hide Form</button> */}
