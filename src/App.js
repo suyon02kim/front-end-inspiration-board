@@ -3,7 +3,7 @@ import axios from 'axios';
 import CardList from './components/CardList';
 import BoardList from './components/BoardList';
 import NewBoardForm from './components/NewBoardForm';
-// import NewCardForm from './components/NewCardForm';
+import NewCardForm from './components/NewCardForm';
 import './App.css';
 
 const URL = 'https://beef-board.onrender.com/';
@@ -31,6 +31,15 @@ function App() {
   
   const addBoardData = (newBoardData) => { 
     const params = {title:newBoardData.title, owner:newBoardData.owner}
+    axios 
+    .post(`${URL}/boards`,params)
+    .then(() => { 
+      getBoards();
+    });
+  };
+
+  const addCardData = (newCardData) => { 
+    const params = {message:newCardData.message}
     axios 
     .post(`${URL}/boards`,params)
     .then(() => { 
@@ -97,7 +106,7 @@ function App() {
           <NewBoardForm addBoardCallback={addBoardData} />
         </section>
         <section>
-          {/* <NewCardForm addCardCallback={setCardData} /> */}
+          <NewCardForm addCardCallback={addCardData} />
         </section>
       </main>
     </div>
