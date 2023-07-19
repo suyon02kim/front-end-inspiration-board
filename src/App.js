@@ -38,12 +38,15 @@ function App() {
     });
   };
 
-  const addCardData = (newCardData) => { 
-    const params = {message:newCardData.message}
+  const addCardData = (newCardData, board_id) => { 
+    const params = {
+      message: newCardData.message,
+      board_id: board_id 
+    };
     axios 
-    .post(`${URL}/boards`,params)
+    .post(`${URL}/boards/${board_id}/cards`,params)
     .then(() => { 
-      getBoards();
+      getCards(board_id);
     });
   };
 
@@ -107,7 +110,7 @@ function App() {
           <NewBoardForm addBoardCallback={addBoardData} />
         </section>
         <section>
-          <NewCardForm addCardCallback={addCardData} />
+        {selectedBoard && <NewCardForm addCardCallback={addCardData} selectedBoard={selectedBoard} />}
         </section>
       </main>
     </div>
