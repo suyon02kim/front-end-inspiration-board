@@ -49,19 +49,21 @@ function App() {
             message: card.message,
             likes_count: card.likes_count,
             board_id: card.board_id,
+            card_id: card.card_id
           };
         });
         setCardData(newCards);
       });
   };
-  // const deleteCard = (card_id) => {
-  //   axios
-  //   .delete(`${URL}/cards/${card_id}`)
-  //   .then(()=> {
-  //     getCards(selectedBoard);
-  //   });
-  //   };
-  // };
+
+  const deleteCard = (card_id) => {
+    axios
+    .delete(`${URL}/cards/${card_id}`)
+    .then(()=> {
+      getCards(selectedBoard);
+    });
+    };
+  
   useEffect(() => {
     getBoards();
   }, []);
@@ -79,7 +81,7 @@ function App() {
           <BoardList boards={boardData} setSelectedBoard={setSelectedBoard} getCards={getCards}/>
         </section>
         <section>
-          <CardList cards={cardData} />
+          <CardList cards={cardData} deleteCard={deleteCard} />
         </section>
         <section>
           {/* <button onclick="toggleForm()">Hide Form</button> */}

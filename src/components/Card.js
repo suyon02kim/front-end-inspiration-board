@@ -4,7 +4,7 @@ import './Card.css';
 
 
 
-const Card = ({card_id, message, likes_count, board_id}) => {
+const Card = ({card_id, message, likes_count, board_id, deleteCard}) => {
     // delete function, add_likes function
     return (
         <div className="card">
@@ -12,7 +12,7 @@ const Card = ({card_id, message, likes_count, board_id}) => {
             <div className="controls">
                 <div className="likes">{likes_count} 🥩</div>
                 <button className="upvote-btn">upvote</button>
-                <button className="delete-btn">delete</button>
+                <button className="delete-btn" onClick={() => deleteCard(card_id)}>delete</button>
             </div>
         </div>
     );
@@ -23,6 +23,7 @@ Card.propTypes = {
     message: PropTypes.string.isRequired,
     likes_count: PropTypes.number.isRequired,
     board_id: PropTypes.number.isRequired,
+    deleteCard: PropTypes.func.isRequired,
 };
 
 export default Card;
