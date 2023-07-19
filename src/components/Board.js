@@ -3,14 +3,11 @@ import PropTypes from 'prop-types';
 import './Board.css';
 
 
-const Board = ({board_id, title, owner, setSelectedBoard, getCards}) => {
-    // const getBoardCards = () => {
-    //     setSelectedBoard(board_id);
-    //     getCards();
+const Board = ({board_id, title, owner, setSelectedBoard, getCards, selectedBoard}) => {
+    const isSelected = (selectedBoard === board_id) ? 'active' : '';
 
-    // }
     return (
-        <button className="board" 
+        <button className={`board ${isSelected}`}
         onClick={() => getCards(board_id)}>
             {title}
         </button>
@@ -23,7 +20,8 @@ Board.propTypes = {
     owner: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     setSelectedBoard: PropTypes.func.isRequired,
-    getCards: PropTypes.func.isRequired
+    getCards: PropTypes.func.isRequired,
+    selectedBoard: PropTypes.number.isRequired
 };
 
 export default Board;

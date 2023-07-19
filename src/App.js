@@ -93,10 +93,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Insert Title Here</h1>
       </header>
       <main>
         <section>
-          <BoardList boards={boardData} setSelectedBoard={setSelectedBoard} getCards={getCards}/>
+          <BoardList boards={boardData} selectedBoard={selectedBoard} setSelectedBoard={setSelectedBoard} getCards={getCards}/>
         </section>
         <section>
           <CardList cards={cardData} deleteCard={deleteCard} updateBeefCount={updateBeefCount}/>

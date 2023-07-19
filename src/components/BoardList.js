@@ -3,7 +3,7 @@ import Board from "./Board";
 import PropTypes from 'prop-types';
 import "./BoardList.css";
 
-const BoardList = ({boards, setSelectedBoard, getCards}) => {
+const BoardList = ({boards, setSelectedBoard, getCards, selectedBoard}) => {
     const getBoardList = (boards) => {
         return boards.map((board) => {
             return (
@@ -14,6 +14,7 @@ const BoardList = ({boards, setSelectedBoard, getCards}) => {
                 title={board.title}
                 setSelectedBoard={setSelectedBoard}
                 getCards={getCards}
+                selectedBoard={selectedBoard}
                 />
             );
         });
@@ -35,7 +36,8 @@ BoardList.propTypes = {
         })
     ).isRequired,
     setSelectedBoard: PropTypes.func.isRequired,
-    getCards: PropTypes.func.isRequired
+    getCards: PropTypes.func.isRequired,
+    selectedBoard: PropTypes.number.isRequired,
 };
 
 
