@@ -42,7 +42,9 @@ function App() {
     axios 
     .delete(`${URL}/boards/${board_id}`)
     .then(() => {
+      setSelectedBoard();
       getBoards();
+      setCardData([]);
     });
   };
 

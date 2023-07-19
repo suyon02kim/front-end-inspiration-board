@@ -1,7 +1,7 @@
 .boardlist {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: baseline;
     height: auto;
   }
 
@@ -9,6 +9,10 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-left: 40px;
     text-decoration: underline;
+    margin-bottom: -10px
+}
+
+.board-list-info {
+  margin: 40px;
 }
