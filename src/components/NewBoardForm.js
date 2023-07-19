@@ -51,7 +51,7 @@ const NewBoardForm = ({ addBoardCallback }) => {
 
   return(
     <div className="new-board-form">
-      <button class="toggle-btn" onClick={toggleForm}>{toggleButtonText}</button>
+      <button className="toggle-btn" onClick={toggleForm}>{toggleButtonText}</button>
       <div className={`form-content ${contentClass}`}>
         <h3>CREATE YOUR OWN BOARD</h3>
         <form onSubmit={onFormSubmit}>

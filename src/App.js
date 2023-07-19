@@ -40,7 +40,6 @@ function App() {
 
   const getCards = (board_id) => {
     setSelectedBoard(board_id);
-    console.log(boardData)
     axios
       .get(`${URL}/boards/${board_id}/cards`)
       .then((response) => {
