@@ -22,9 +22,9 @@ const NewCardForm = ({ addCardCallback }) => {
     event.preventDefault();
 
     if (formFields.message.length > 40) {
-      setErrorMessage('You need less BEEF');
+      setErrorMessage('You need LESS BEEF');
     } else if (formFields.message.length < 2) {
-      setErrorMessage('You need More BEEF');
+      setErrorMessage('You need MORE BEEF');
     } else {
     addCardCallback({
       message: formFields.message
