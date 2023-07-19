@@ -29,7 +29,7 @@ const NewCardForm = ({ addCardCallback }) => {
     addCardCallback({
       message: formFields.message
     });
-
+    setErrorMessage('');
     setFormFields({
       message:''
     });

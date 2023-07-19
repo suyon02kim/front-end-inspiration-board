@@ -17,6 +17,7 @@ const NewBoardForm = ({ addBoardCallback }) => {
       setTitleErrorMessage('Please title your BEEF');
       return false;
     } else {
+      setTitleErrorMessage('');
       return true;
     }
   };
@@ -26,6 +27,7 @@ const NewBoardForm = ({ addBoardCallback }) => {
       setOwnerErrorMessage('Whose BEEF is this?');
       return false;
     } else {
+      setOwnerErrorMessage('');
       return true;
     }
   };
