@@ -5,11 +5,11 @@ import './Board.css';
 
 const Board = ({board_id, title, owner, setSelectedBoard, getCards, selectedBoard, deleteBoard}) => {
     const isSelected = (selectedBoard === board_id) ? 'active' : '';
-
+    
     return (
         <button className={`board ${isSelected}`}
         onClick={() => getCards(board_id)}
-        onDoubleClick={() => deleteBoard(board_id)}>
+        onDoubleClick={() => { window.confirm( 'Are you sure you want to delete this Board?', ) && deleteBoard(board_id) }}>
             {title}
         </button>
     
