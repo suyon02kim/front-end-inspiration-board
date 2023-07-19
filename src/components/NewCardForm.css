@@ -1,7 +1,7 @@
 .new-card-form {
   width: 490px;
   margin-top: 20px;
-  align-content: right;
+  float: right;
 }
 
 .form-content {

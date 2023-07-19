@@ -1,7 +1,15 @@
 .App {
   text-align: center;
 }
-
+.board-form{
+  width: 490px;
+}
+.card-form{
+  width: 490px;
+  position:absolute;
+  top: 5;
+  right:0;
+}
 .App-header {
   background-color: #282c34;
   min-height: 10vh;
