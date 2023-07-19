@@ -1,14 +1,17 @@
+*{
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
 .board-form{
-  width: 490px;
+  float:left;
+  width: 50%;
 }
 .card-form{
-  width: 490px;
-  position:absolute;
-  top: 5;
-  right:0;
+
+  float:right;
+  width: 50%;
 }
 .App-header {
   background-color: #282c34;
