@@ -38,6 +38,14 @@ function App() {
     });
   };
 
+  const deleteBoard = (board_id) => {
+    axios 
+    .delete(`${URL}/boards/${board_id}`)
+    .then(() => {
+      getBoards();
+    });
+  };
+
   const addCardData = (newCardData ) => { 
     const params = {
       message: newCardData.message,
@@ -99,7 +107,7 @@ function App() {
       </header>
       <main>
         <section>
-          <BoardList boards={boardData} selectedBoard={selectedBoard} setSelectedBoard={setSelectedBoard} getCards={getCards}/>
+          <BoardList boards={boardData} selectedBoard={selectedBoard} setSelectedBoard={setSelectedBoard} getCards={getCards} deleteBoard ={deleteBoard}/>
         </section>
         <section>
           <CardList cards={cardData} deleteCard={deleteCard} updateBeefCount={updateBeefCount}/>

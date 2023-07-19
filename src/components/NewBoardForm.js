@@ -81,7 +81,7 @@ const NewBoardForm = ({ addBoardCallback }) => {
       <button className="toggle-btn" onClick={toggleForm}>{toggleButtonText}</button>
       <div className={`form-content ${contentClass}`}>
         <h3>CREATE YOUR OWN BOARD</h3>
-        <form onSubmit={onFormSubmit}>
+        <form id="board-form" onSubmit={onFormSubmit}>
           <div className="input-fields">
             <label htmlFor='title'>Title:</label>
             <input
