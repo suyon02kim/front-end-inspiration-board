@@ -87,7 +87,7 @@ function App() {
       </header>
       <main>
         <section>
-          <BoardList boards={boardData} setSelectedBoard={setSelectedBoard} getCards={getCards}/>
+          <BoardList boards={boardData} selectedBoard={selectedBoard} setSelectedBoard={setSelectedBoard} getCards={getCards}/>
         </section>
         <section>
           <CardList cards={cardData} deleteCard={deleteCard} updateBeefCount={updateBeefCount}/>
