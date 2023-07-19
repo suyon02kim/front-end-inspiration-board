@@ -105,7 +105,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Insert Title Here</h1>
+        <h1>High Quality Beef</h1>
       </header>
       <main>
         <section>
