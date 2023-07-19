@@ -37,7 +37,6 @@ const NewBoardForm = ({ addBoardCallback }) => {
       ...formFields,
       title: event.target.value
     });
-    validateTitle(event.target.value);
   };
 
   const onOwnerChange = (event) => {
@@ -45,7 +44,6 @@ const NewBoardForm = ({ addBoardCallback }) => {
       ...formFields,
       owner: event.target.value
     });
-    validateOwner(event.target.value);
   };
 
   const onFormSubmit = (event) => {
@@ -92,7 +90,6 @@ const NewBoardForm = ({ addBoardCallback }) => {
               value={formFields.title}
               onChange={onTitleChange}
               placeholder='Quarter Pounder Beef'
-              required
               className={titleErrorMessage ? 'error' : ''}
             />
             {titleErrorMessage && <div className="error-message">{titleErrorMessage}</div>}
@@ -105,7 +102,6 @@ const NewBoardForm = ({ addBoardCallback }) => {
               value={formFields.owner}
               onChange={onOwnerChange}
               placeholder='Ronald M.'
-              required
               className={ownerErrorMessage ? 'error' : ''}
             />
             {ownerErrorMessage && <div className="error-message">{ownerErrorMessage}</div>}
