@@ -19,7 +19,7 @@ function App() {
       .then((response) => {
         const newBoards = response.data.map((board) => {
           return {
-            board_id: board.board_id,
+            board_id: board.id,
             title: board.title,
             owner: board.owner,
             cards: board.cards,
@@ -39,6 +39,8 @@ function App() {
   };
 
   const getCards = (board_id) => {
+    setSelectedBoard(board_id);
+    console.log(boardData)
     axios
       .get(`${URL}/boards/${board_id}/cards`)
       .then((response) => {
@@ -52,7 +54,14 @@ function App() {
         setCardData(newCards);
       });
   };
-
+  // const deleteCard = (card_id) => {
+  //   axios
+  //   .delete(`${URL}/cards/${card_id}`)
+  //   .then(()=> {
+  //     getCards(selectedBoard);
+  //   });
+  //   };
+  // };
   useEffect(() => {
     getBoards();
   }, []);
