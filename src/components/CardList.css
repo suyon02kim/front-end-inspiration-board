@@ -2,9 +2,12 @@
 .cardlist {
     display: flex;
     align-items: center;
-    justify-content: center;
+    align-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
     height: 300px;
     overflow: auto;
+    width: 100%;
     white-space: nowrap;
   }
 
