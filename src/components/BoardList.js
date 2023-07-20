@@ -26,7 +26,7 @@ const BoardList = ({boards, setSelectedBoard, getCards, selectedBoard, deleteBoa
                 <div className="boardlist-label">
                     PICK A BOARD:
                 </div>
-                <p className="delete-rules">double click a board to delete</p>
+                <p className="delete-rules">( double click a board to delete )</p>
             </div>
             {getBoardList(boards)}
         </div>

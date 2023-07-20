@@ -1,13 +1,13 @@
 .card {
     white-space: normal;
     border-radius: 5%;
-    border: 1px solid #ddd;
-    box-shadow: 2px 2px 4px #ccc;
+    border: 1px solid #777;
+    box-shadow: 2px 2px 4px #666;
     background-color: #fff;
     color: #000;
-    height: 200px;
-    width: 200px;
-    min-width: 200px;
+    height: 250px;
+    width: 250px;
+    min-width: 250px;
     margin: 20px;
     padding: 25px;
     display: flex;

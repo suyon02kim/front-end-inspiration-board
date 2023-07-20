@@ -36,10 +36,24 @@ const NewCardForm = ({ addCardCallback }) => {
   }
 };
 
+// HIDDEN FEATURES
+  const [isHidden, setHidden] = useState(false);
+  const toggleForm = () => {
+  if (isHidden) {
+    setHidden(false)
+  } else {
+    setHidden(true)
+  }
+};
+
+  const contentClass = isHidden ? 'form-content--hidden' : '';
+  const toggleButtonText = isHidden ? 'add some beef ?' : 'hide card creation form';
+
   return(
     <div className="new-card-form">
-    <div className="form-content" >
-    <h3>ADD BEEF</h3>
+      <button className="toggle-btn" onClick={toggleForm}>{toggleButtonText}</button>
+      <div className={`form-content ${contentClass}`}>
+    <h3>ADD SOME BEEF ?</h3>
     <form id="card-form" onSubmit={onFormSubmit}>
         <div className="input-fields">
           <label htmlFor='message'>Message</label>

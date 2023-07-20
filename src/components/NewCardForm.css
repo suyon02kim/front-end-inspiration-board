@@ -1,19 +1,10 @@
 .new-card-form {
   width: 490px;
-  margin-top: 20px;
-  float: right;
-}
-
-.form-content {
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  box-shadow: 2px 2px 4px #ccc;
-  background-color: #fff;
-  color: #000;
-  height: auto;
-  width: 400px;
-  margin: 10px;
-  padding: 15px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .error-message {
@@ -21,18 +12,3 @@
     padding: 8px;
     color: red;
   }
-  .input-fields {
-    text-align: center;
-    margin: 10px;
-}
-label {
-  margin-right: 10px;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-input {
-  width: 100%;
-}

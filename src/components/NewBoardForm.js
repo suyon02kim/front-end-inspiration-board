@@ -74,16 +74,16 @@ const NewBoardForm = ({ addBoardCallback }) => {
   };
 
   const contentClass = isHidden ? 'form-content--hidden' : '';
-  const toggleButtonText = isHidden ? 'create your own board' : 'hide creation form';
+  const toggleButtonText = isHidden ? 'start some beef ?' : 'hide board creation form';
 
   return(
     <div className="new-board-form">
       <button className="toggle-btn" onClick={toggleForm}>{toggleButtonText}</button>
       <div className={`form-content ${contentClass}`}>
-        <h3>CREATE YOUR OWN BOARD</h3>
+        <h3>START SOME BEEF ?</h3>
         <form id="board-form" onSubmit={onFormSubmit}>
           <div className="input-fields">
-            <label htmlFor='title'>Title:</label>
+            <label htmlFor='title'>Title</label>
             <input
               id='title'
               name='title'
@@ -95,7 +95,7 @@ const NewBoardForm = ({ addBoardCallback }) => {
             {titleErrorMessage && <div className="error-message">{titleErrorMessage}</div>}
           </div>
           <div className="input-fields">
-            <label htmlFor='owner'>Owner:</label>
+            <label htmlFor='owner'>Owner</label>
             <input
               id='owner'
               name='owner'

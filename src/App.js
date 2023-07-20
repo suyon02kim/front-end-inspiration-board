@@ -114,12 +114,9 @@ function App() {
         <section>
           <CardList cards={cardData} deleteCard={deleteCard} updateBeefCount={updateBeefCount}/>
         </section>
-        <section className='board-form'>
-          {/* <button onclick="toggleForm()">Hide Form</button> */}
+        <section className='forms'>
           <NewBoardForm addBoardCallback={addBoardData} />
-        </section>
-        <section className='card-form'>
-        {selectedBoard && <NewCardForm addCardCallback={addCardData} />}
+          {selectedBoard && <NewCardForm addCardCallback={addCardData} />}
         </section>
       </main>
     </div>

@@ -1,12 +1,16 @@
 .new-board-form {
     width: 490px;
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-content {
     border-radius: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 2px 2px 4px #ccc;
+    border: 1px solid #bbb;
+    box-shadow: 2px 2px 4px #aaa;
     background-color: #fff;
     color: #000;
     height: auto;
@@ -19,30 +23,12 @@
     display: none;
 }
 
-/* FORM INPUT AND LABEL STYLING */
-.input-fields {
-    text-align: left;
-    margin: 10px;
-}
-
-label {
-    margin-right: 10px;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-input {
-    width: 100%;
-}
-
 /* TOGGLE BUTTON STYLING */
 .toggle-btn {
     background-color: #c67728;
     font-size: 16px;
     width: 300px;
-    box-shadow: 4px 4px #ccc;
+    box-shadow: 4px 4px #555;
 }
 
 toggle-btn:active {
